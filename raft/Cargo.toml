@@ -1,0 +1,2 @@
+[workspace]
+members = ["xtask", "raft-main", "raft-main-common"]

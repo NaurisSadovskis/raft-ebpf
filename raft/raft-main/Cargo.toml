@@ -1,0 +1,33 @@
+[package]
+name = "raft-main"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+aya = { git = "https://github.com/aya-rs/aya", features = ["async_tokio"] }
+aya-log = { git = "https://github.com/aya-rs/aya" }
+clap = { version = "4.1", features = ["derive"] }
+raft-main-common = { path = "../raft-main-common", features = ["user"] }
+anyhow = "1"
+env_logger = "0.10"
+libc = "0.2"
+log = "0.4"
+tokio = { version = "1.25", features = ["macros", "rt", "rt-multi-thread", "net", "signal"] }
+axum = "0.6.20"
+serde = { version = "1.0.189", features = ["derive"] }
+tower-http = "0.4.4"
+serde_json = "1.0.107"
+hyper = "0.14.27"
+nix = "0.23.1"
+rand = "0.8.4"
+dns-lookup = "2.0.4"
+local-ip-address = "0.6.1"
+rayon = "1.5.1"
+
+[[bin]]
+name = "raft-main"
+path = "src/main.rs"
+
+
+#![feature(ip_in_core)]
