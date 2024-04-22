@@ -8,3 +8,9 @@ build-and-run-leader:
 
 run-node:
 	RUST_LOG=$(LOG_LEVEL) PEERS=$(PEERS) ./$(RAFT_DIR)/target/debug/raft-main --iface $(INTERFACE)
+
+fmt:
+	cd $(RAFT_DIR)/ && cargo fmt 
+
+clippy:
+	cd $(RAFT_DIR)/ && cargo clippy 
